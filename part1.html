@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Part 1</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<nav>
+			<a href="part1.html">Part1</a>
+			<a href="part2.php">Part2</a>
+		</nav>
+		<img src="flower.jpg" alt="water lily flower" >
+		<p id="json"></p>
+		
+<!--		Call to json data in part2.php file-->
+		<script>
+			var xmlhttp = new XMLHttpRequest();
+
+			xmlhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					myObj = JSON.parse(this.responseText);
+					document.getElementById("json").innerHTML = myObj[];
+				}
+			};
+			xmlhttp.open("GET", "part2.php", true);
+			xmlhttp.send();
+		</script>
+
+	</body>
+</html>
